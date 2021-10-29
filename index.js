@@ -8,11 +8,6 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-//get api
-app.get("/", (req, res) => {
-  res.send("welcome");
-});
-
 //mongodb connection
 
 const uri =
@@ -67,6 +62,11 @@ async function run() {
 }
 
 run().catch(console.dir);
+
+//get api
+app.get("/", (req, res) => {
+  res.send("welcome heruko server");
+});
 
 //listen server response
 app.listen(port, () => {
